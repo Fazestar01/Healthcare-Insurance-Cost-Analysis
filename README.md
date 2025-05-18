@@ -1,13 +1,13 @@
 # Hackathon : Healthcare Insurance Cost Analysis - Project 1
 
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+**Hackathon - Python ETL & Visualisation ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
+* This dataset is about healthcare insurance and contains records including demographic and lifestyle factors that impact the costs of insurance. The dataset contains information on the relationship between personal attributes like: age, gender, BMI, family size, smoking habits, geoographic factors and their impact on medical insurance charges. This dataset helps anaylse fctors affecting healthcare costs and usuaeful for predictive modelling in the insurance industry. it also allows data visualisation to understand expense trends across different groups. The current size of the dataset is at 700,000 bytes.
 
 
 ## Business Requirements
@@ -15,7 +15,7 @@
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* Do I want to know age distributions or comparing insurance costs on smokers and non smokers?
 
 ## Project Plan
 * Outline the high-level steps taken for the analysis.
@@ -35,11 +35,7 @@
 * Were there any data privacy, bias or fairness issues with the data?
 * How did you overcome any legal or societal issues?
 
-## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
+
 
 ## Unfixed Bugs
 * Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
@@ -50,7 +46,7 @@
 * What challenges did you face, and what strategies were used to overcome these challenges?
 * What new skills or tools do you plan to learn next based on your project experience? 
 
-## Deployment
+
 ### Heroku
 
 * The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
