@@ -1,13 +1,12 @@
 # Hackathon : Healthcare Insurance Cost Analysis - Project 1
 
+# ![Healthcare Insurance Image](.venv/images/shutterstock_784148026-2-2048x1365.jpg)
 
 **Hackathon - Python ETL & Visualisation ** This project is designed to sharpen and show the steps to how ETL and visualisation works hand in hand. This is an opportunity to use data, project management and presenatation skills using this project.
 
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
 
 ## Dataset Content
-* This dataset is about healthcare insurance and contains records including demographic and lifestyle factors that impact the costs of insurance. The dataset contains information on the relationship between personal attributes like: age, gender, BMI, family size, smoking habits, geoographic factors and their impact on medical insurance charges. This dataset helps anaylse fctors affecting healthcare costs and usuaeful for predictive modelling in the insurance industry. it also allows data visualisation to understand expense trends across different groups. The current size of the dataset is at 700,000 bytes.
+* This dataset is about healthcare insurance and contains records including demographic and lifestyle factors that impact the costs of insurance. The dataset contains information on the relationship between personal attributes like: age, gender, BMI, family size, smoking habits, geoographic factors and their impact on medical insurance charges. This dataset helps anaylse fctors affecting healthcare costs and usuaeful for predictive modelling in the insurance industry. it also allows data visualisation to understand expense trends across different groups. The current size of the dataset is at 0.99GB.
 
 
 ## Business Requirements
@@ -43,7 +42,7 @@ How to Validate These hypotheses? -
 
  * deciding on the best visuals to represent the data; boxplots or bar charts?
 
- * Scatter plot in BMI vs Charges to check correlation strengths.
+ * Interactive scatter plot in BMI vs Charges to check correlation strengths.
 
 ## Project Plan
 I will break my project plan down into three sections:
@@ -103,56 +102,137 @@ In terms of visualisations, I used this to show the patterns in the insurance an
 Lastly, I didnt take the predictive route as healthcare seems to require more exploratory analysis rather than prediction due to the nature of uncertain health conditions. 
 
 ## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+* Understanding Cost Drivers - Bar Chart (Age vs Charges). This helps shows how insurance costs changes with age. It helps companies use this structure with pricing. It was also an insight to show how pricing can also still be adjusted, especially as younger people cannot afford these extra costs early on.
+
+* Identifying Patterns in Costs - Histogram (Charges Distrubtion). This simply gives a bigger picture view on how insurance prices vary, helping businesses see cost trends.
+
+* Exploring Lifestyle Impact - Scatter Plot (BMI VS Charges). This shows if the BMI affects insurance pricing which in turn, helps clients make health related decisions.
 
 ## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+* Descriptive Statistics - I used the df.describe() to summarise key metrics like 'mean', 'median' and distribution. This provided a broad overview but doesn't explain deeper relationships in the data. 
+Alternative: Using correlation analysis (df.corr()) to measure how features impact insurance costs.
+
+* Visualisation (Histograms, Bar Charts and Scatter Plots) - Was used to highlight trends in age, BMI and smoker-related costs. The limitation was some relationships (like BMI vs Charges) may have been weak, requiring additional analysis.
+Alternative: Regression modeling could further quantify relationships.
+
+* Data Limitations & Alternative Approaches - Potential limitations: The dataset may not have enough varitaions (e.g., if certain age groups are underrepresented).
+Alternative: Normalise the data where necessary and focus on key feature comparisons to avoid misleading trends.
+
+* Using Generative AI for Ideation & Optimisation - Ideation: AI helped brainstorm visualiz#sation approaches suited for business needs.
+Design Thinking: AI suggested structured explanations for README documentation. 
+Code Optimisation: AI guided efficient use of Pandas, Seaborn, and Plotly, ensuring cleaner, more scalable code.
+
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
+* Bias & Fairness: Potential bias may exist if certain demographic groups are over- or underrepresented. To mitigate this, a fairness check was conducted by analyzing distributions across age, region, and smoker status.
+
+* Legal & Societal Issues: The dataset was used strictly for analytical purposes, with insights focused on general trends rather than individual predictions, ensuring ethical transparency.
+
+* Data Privacy: The dataset does not contain personally identifiable information (PII), ensuring individual privacy is protected.
+
 
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+* The sections on the Notebook has an error message that is more of a warning than that a necessary change needed. The error appeared on 2 of the grapths (Bar chart and Histogram) which I corrected one of them and left the other as I was ok with the colour theme it had. The prompt is attached here underneath the Histogram:
+
+**C:\Users\faiza\AppData\Local\Temp\ipykernel_23852\231279000.py:2: FutureWarning:** 
+
+**Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.**
+
+  **sns.barplot(data=age_avg_charges, x='age_group', y='charges', palette='coolwarm')**
+
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+
+**Challenges I faced:**
+* I would say the challenges I faced was firstly around setting up my respo and the project entirely. I would say that the whole set wasn't hard, its just a lot to remember from the project management side, to the ETL side and the documentation. You have to have all the foundational elements otherwise it could set you back.
+
+* There was also issues with setting up my Kernel, it seemed that i didnt finish installing the 'ipython' part to my code, even when I did install that to the terminal, it didnt work out, just to find out it was a simple 'turn off and turn on' rule.
+
+
+* I would also say that my coding was also a key feature to remember as it has caused my Plotly to not show my interactive chart. This was all because I missed one code sequence to add on my terminal. You will see the screenshot below:
+
+![alt text](<Screenshot 2025-05-18 195555.png>)
+
+
+**What new skills or tools do you plan to learn next based on your project experience?**
+* I would definitely say that having a separate notepad or a document that keeps all the codes in one place is the best move to make as it can be a guide to keep on top of the codes that I can use in my terminal. This keeps all the required codes in check whilst avoid any errors that may pop up later like 'source .venv/Scripts/activate' which was the reason my Plotly wasnt working due to having the set up done locally.
+
+* In addition, I would also say that having a planner either through excel or any place to plan the setting up of a project works wonders! This has saved me a lot of time!
+
+* Sometimes you just need to exit and reopen.
 
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+* Pandas - This used for loading, cleaning and transforming the dataset:
+
+**import pandas as pd** 
+
+**df = pd.read_csv("processed_data.csv")  # Load dataset**  
+**df.info()  # Check structure**  
+**df.describe()  # Get summary stats**  
+
+* Numpy - This is used for effective numerical operations (like I did when convering the string information to integars):
+
+**import numpy as np**  
+
+**corr_matrix = np.round(df.corr(), 2)  # Generate correlation matrix**  
+**print(corr_matrix)**
+
+* Seaborn & Matplotlib - This is used for static visualisations ( which I did for Histograms and Bar charts):
+
+**import seaborn as sns**  
+**import matplotlib.pyplot as plt**  
+
+**sns.histplot(df["charges"], bins=30)  # Histogram of insurance charges**  
+**plt.title("Distribution of Insurance Costs")**  
+**plt.show()**
+
+* Plotly - This is used for interactive visualisation (like the scatter plot):
+
+**import plotly.express as px**  
+
+**fig = px.scatter(df, x="bmi", y="charges", color="smoker",** **title="BMI vs Insurance Charges")**  
+**fig.show()**
+
 
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+*  (https://github.com/Code-Institute-Solutions/da-README-template/blob/main/README.md) - This README template was provided on GitHub by NielMc
+
+* (https://github.com/Code-Institute-Org/data-analytics-template/tree/main) - The Data Analytics template that has all the features and requirement of this project by NielMc
+
+* ![alt text](<Screenshot 2025-05-18 151511.png>) - This article allowed me to have a more rounded view on what is happening in the world of insurance, using news and existing articles can help make better decisions on the best route to transform the data.
+
+* ![alt text](<Screenshot 2025-05-18 145254.png>) - This forum is insightful on coding as it helped me have a better understanding on different way on how I can code. 'cat.codes' helps me summaries statistics on a column of data which was handy when it came to transforming the data.
+
+* Using AI chatbots like Micorsoft Copilot really help interpret information to me in a way that was understandable, especially when I came across errors in the system:
+
+![alt text](image.png)
+
+* Lastly, I wanted to have a better idea on the coding I wanted to use and wasnt too sure on where to start, I decided to start with looking back at my online classroom to give me a reminder on the sequence I can work with, I didnt use this entirely, but it gave me a good idea:
+
+![alt text](<Screenshot 2025-05-18 144417.png>)
+
+
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The text fonts where taken from (https://www.markdownguide.org/cheat-sheet/) 
+
 
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
+- The photos above (the header of this README) is taken from the code institute website.
 
 
 
-## Acknowledgements (optional)
-* NeilMc 
-* Emma Lamont 
-* John Rearden 
-* Mark Briscoe 
+## Acknowledgements
+* NeilMc - For the amazing templates and online classroom lessons (LMS).
+* Emma Lamont - For starting and ending the day on a high note.
+* John Rearden - For re-explaining simple code to us over and over again and being patient enough to do so.
+* Mark Briscoe  - For being a great motivational speaker. 
 
 
 
